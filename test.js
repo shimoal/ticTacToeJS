@@ -6,6 +6,11 @@ var Player = require('./ticTacToe.js').Player;
 describe('Game', function() {
   var game = new Game();
 
+  it('should be a constructor', function() {
+    expect(Game).to.be.a('function');
+    expect(game).to.be.an('object');
+  })
+
   it('should be able to determine a winning combination', function() {
     expect(game.checkForWinner([1, 2, 4])).to.equal(false);
     expect(game.checkForWinner([3, 6, 9])).to.equal(true);
@@ -21,4 +26,17 @@ describe('Game', function() {
     expect(game.moveIsValid(3)).to.equal(true);
   });
 });
+
+describe('Player', function() {
+  var player = new Player();
+  it('should be a constructor', function() {
+    expect(Player).to.be.a('function');
+    expect(player).to.be.an('object');
+  });
+
+  it('should be a moves property to store previous moves', function() {
+    expect(player.moves).to.exist;
+    expect(player.moves).to.be.an('array');
+  });
+})
 
