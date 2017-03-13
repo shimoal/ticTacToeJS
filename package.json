@@ -4,7 +4,7 @@
   "description": "",
   "main": "tictactoe.js",
   "scripts": {
-    "start": "node ticTacToe.js",
+    "start": "node play.js",
     "test": "mocha"
   },
   "author": "",
